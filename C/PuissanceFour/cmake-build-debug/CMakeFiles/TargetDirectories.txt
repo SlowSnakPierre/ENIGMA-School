@@ -1,0 +1,3 @@
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/PuissanceFour/cmake-build-debug/CMakeFiles/PuissanceFour.dir
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/PuissanceFour/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/PuissanceFour/cmake-build-debug/CMakeFiles/rebuild_cache.dir

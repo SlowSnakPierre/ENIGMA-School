@@ -55,12 +55,12 @@ public class PlayerBoard {
 
         if (startRow == endRow) {
             for (int i = startColumn; i <= endColumn; i++) {
-                board[startRow][i] = Ship.indicator;
+                board[startRow][i] = ship.indicator;
             }
         }
         else if (startColumn == endColumn) {
             for (int i = startRow; i <= endRow; i++) {
-                board[i][startColumn] = Ship.indicator;
+                board[i][startColumn] = ship.indicator;
             }
         }
     }

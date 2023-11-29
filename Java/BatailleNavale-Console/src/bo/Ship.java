@@ -1,10 +1,8 @@
 package bo;
 
-import bo.PlayerBoard;
-
 public class Ship {
     String name;
-    static String indicator;
+    String indicator;
     int length;
 
     int startRow;

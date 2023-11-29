@@ -31,7 +31,7 @@ public class Display {
         String coordinates;
         while (!playerName.equals("Player 2") || shipsPlaced != TOTAL_SHIPS) {
             System.out.println(playerName + " select a ship to place (Carrier, Battleship, Submarine, Cruiser, or Destroyer): ");
-            String currentShipName = scanner.nextLine();
+            String currentShipName = shipsPlaced == 0 ? "Carrier" : shipsPlaced == 1 ? "Battleship" : shipsPlaced == 2 ? "Submarine" : shipsPlaced == 3 ? "Cruiser" : "Destroyer"; //scanner.nextLine();
             String currentShipIndicator = Objects.equals(currentShipName.toLowerCase(), "cruiser") ? currentShipName.substring(0, 1).toLowerCase() : currentShipName.substring(0, 1).toUpperCase();
             if (!currentPlayer.playerBoard.ships.isEmpty()) {
 
@@ -59,7 +59,7 @@ public class Display {
             }
             while (true) {
                 System.out.println("Please enter coordinates of " + currentShipName + " (Length " + shipLength + "):");
-                coordinates = scanner.nextLine();
+                coordinates = shipsPlaced == 0 ? "A1 A5" : shipsPlaced == 1 ? "B1 B4" : shipsPlaced == 2 ? "C1 C3" : shipsPlaced == 3 ? "D1 D3" : "E1 E2";//scanner.nextLine();
                 if (!isValidCoordinates(coordinates, shipLength, currentPlayer)) {
                     continue;
                 }
