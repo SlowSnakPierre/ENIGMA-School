@@ -6,9 +6,10 @@ public class GraphicalNavalGrid extends NavalGrid {
     private GraphicalGrid grid;
 
     public GraphicalNavalGrid(int size) {
-        super(size, ((size / 5) == 0 ? 2 : size / 5 + 2));
+        super(size, 5);
         this.grid = new GraphicalGrid(size);
         this.grid.setClickActive(false);
+
     }
 
     public GraphicalGrid getGraphicalGrid() {

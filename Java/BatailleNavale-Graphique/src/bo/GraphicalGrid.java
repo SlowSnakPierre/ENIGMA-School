@@ -8,11 +8,15 @@ import java.awt.event.ComponentEvent;
 
 class JButtonCoordonnee extends JButton {
     private Coordonnee coords;
+    public boolean isLocalEnabled = true;
     public JButtonCoordonnee(Coordonnee coords) {
         this.coords = coords;
     }
     public Coordonnee getCoords() {
         return coords;
+    }
+    public void setLocalEnabled(boolean isLocalEnabled) {
+        this.isLocalEnabled = isLocalEnabled;
     }
 }
 
@@ -88,8 +92,9 @@ public class GraphicalGrid extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        JButtonCoordonnee btn = (JButtonCoordonnee) e.getSource();
         this.setClickActive(false);
-        SelectedCoords = ((JButtonCoordonnee) e.getSource()).getCoords();
+        SelectedCoords = btn.getCoords();
         synchronized (this) {
             this.notifyAll();
         }

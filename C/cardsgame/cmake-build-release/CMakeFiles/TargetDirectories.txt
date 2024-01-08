@@ -1,0 +1,3 @@
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/cardsgame/cmake-build-release/CMakeFiles/cardsgame.dir
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/cardsgame/cmake-build-release/CMakeFiles/edit_cache.dir
+C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/cardsgame/cmake-build-release/CMakeFiles/rebuild_cache.dir

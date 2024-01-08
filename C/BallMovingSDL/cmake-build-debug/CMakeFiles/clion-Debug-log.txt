@@ -1,0 +1,14 @@
+"C:\Users\thblt\AppData\Local\Programs\CLion Nova\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Users/thblt/AppData/Local/Programs/CLion Nova/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\thblt\OneDrive\Bureau\ENIGMA-School\C\BallMovingSDL -B C:\Users\thblt\OneDrive\Bureau\ENIGMA-School\C\BallMovingSDL\cmake-build-debug
+CMake Warning (dev) at C:/Users/thblt/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (SDL2_image)
+  does not match the name of the calling package (SDL2_IMAGE).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  C:/Users/thblt/AppData/Local/Programs/CLion Nova/bin/cmake/win/x64/share/cmake-3.27/Modules/FindSDL2_image.cmake:91 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:11 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/BallMovingSDL/cmake-build-debug

@@ -34,8 +34,9 @@ public class GraphicalPlayer extends PlayerWithGrid {
     }
 
     protected void returnAttack(Coordonnee coords, int status) {
-        Color color = status == Player.MISSED ? Color.BLUE : Color.RED;
+        Color color = status != MISSED ? Color.RED : Color.BLUE;
         shootingGrid.setColor(coords, color);
+
         switch (status) {
             case TOUCHED:
                 JOptionPane.showMessageDialog(shootingGrid, "You have hit a ship at " + coords);

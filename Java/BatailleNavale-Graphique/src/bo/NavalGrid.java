@@ -6,6 +6,7 @@ public class NavalGrid {
     private int size;
     private Coordonnee[] receivedShoots;
     private int cbReceivedShoots;
+    private GraphicalGrid gridPlacement;
 
     public NavalGrid(int size, int[] nbShips) {
         if (size < 0 || size > 26) {

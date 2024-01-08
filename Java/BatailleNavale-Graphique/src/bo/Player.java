@@ -1,5 +1,6 @@
 package bo;
 
+import javax.swing.*;
 import java.util.Objects;
 
 public abstract class Player {
@@ -48,6 +49,7 @@ public abstract class Player {
 
         while (resAtt != GAMEOVER || resDef != GAMEOVER) {
             Coordonnee cAtt = attacker.chooseAttack();
+
             resAtt = defender.receiveAttack(cAtt);
 
             attacker.returnAttack(cAtt, resAtt);

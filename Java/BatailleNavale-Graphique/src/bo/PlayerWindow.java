@@ -3,7 +3,6 @@ package bo;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ComponentEvent;
 
 public class PlayerWindow extends JFrame {
     private JPanel contentPane;
