@@ -154,12 +154,13 @@ public class Main {
                 EventQueue.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-						String p1Name = textField_1.getText().compareTo("")==0 ? textField_1.getText() : "Player 1";
-						String p2Name = textField_2.getText().compareTo("")==0 ? textField_2.getText() : "Player 2";
+						String p1Name = textField_1.getText().compareTo("")==0 ? "Player 1" : textField_1.getText();
+						String p2Name = textField_2.getText().compareTo("")==0 ? "Player 2" : textField_2.getText();
 
 						if (rdbtP1Graphical.isSelected()) {
 							PlayerWindow window = new PlayerWindow(p1Name, GRID_SIZE);
 							ShipPlacementWindow placementWindow = new ShipPlacementWindow(p1Name, GRID_SIZE, tabNav, window.getDefendingGrid());
+							placementWindow.setTitle("Sea Battle : " + p1Name + " Waiting for placement");
 							centreWindow(placementWindow);
 							placementWindow.setVisible(true);
 
@@ -186,7 +187,8 @@ public class Main {
 
 									if (rdbtP2Graphical.isSelected()) {
 										PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-										ShipPlacementWindow placementWindow = new ShipPlacementWindow(p1Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
+										ShipPlacementWindow placementWindow = new ShipPlacementWindow(p2Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
+										placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
 										centreWindow(placementWindow);
 										placementWindow.setVisible(true);
 
@@ -254,7 +256,8 @@ public class Main {
 						if (!rdbtP1Graphical.isSelected()) {
 							if (rdbtP2Graphical.isSelected()) {
 								PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-								ShipPlacementWindow placementWindow = new ShipPlacementWindow(p1Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
+								ShipPlacementWindow placementWindow = new ShipPlacementWindow(p2Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
+								placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
 								centreWindow(placementWindow);
 								placementWindow.setVisible(true);
 
