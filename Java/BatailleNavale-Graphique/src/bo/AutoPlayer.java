@@ -5,11 +5,6 @@ public class AutoPlayer extends PlayerWithGrid {
         super(grid, name);
     }
 
-    public AutoPlayer(NavalGrid grid) {
-        super(grid);
-    }
-
-
     protected void returnAttack(Coordonnee coords, int status) {
         System.out.println("\nAttack Result :");
         if (status == TOUCHED) {

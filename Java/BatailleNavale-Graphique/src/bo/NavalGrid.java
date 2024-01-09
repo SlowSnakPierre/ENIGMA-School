@@ -1,12 +1,11 @@
 package bo;
 
 public class NavalGrid {
-    private Ship[] ships;
+    private final Ship[] ships;
     private int cbShips;
-    private int size;
-    private Coordonnee[] receivedShoots;
+    private final int size;
+    private final Coordonnee[] receivedShoots;
     private int cbReceivedShoots;
-    private GraphicalGrid gridPlacement;
 
     public NavalGrid(int size, int[] nbShips) {
         if (size < 0 || size > 26) {
@@ -34,7 +33,7 @@ public class NavalGrid {
 
     @Override
     public String toString() {
-        StringBuffer str = new StringBuffer("   ");
+        StringBuilder str = new StringBuilder("   ");
 		for (int i = 0; i < this.size; i++) {
 			str.append((char) (65 + i)).append(" ");
 		}
@@ -89,9 +88,8 @@ public class NavalGrid {
 				else
 					str.setCharAt(j, 'O');
 
-			} catch (StringIndexOutOfBoundsException e) {
-				continue;
-			}
+			} catch (StringIndexOutOfBoundsException ignored) {
+            }
 		}
 		return str.toString();
     }
@@ -119,10 +117,6 @@ public class NavalGrid {
 		return false;
     }
 
-    public int getShip() {
-        return ships.length;
-    }
-
     public void placementAuto(int[] shipSizes) {
         int i = 0;
 		if (shipSizes.length > this.ships.length) {
@@ -130,8 +124,8 @@ public class NavalGrid {
 		} else {
             while (i < shipSizes.length) {
                 boolean isVertical = Math.random() < 0.5;
-                int StartingRow = 0;
-                int startingColumn = 0;
+                int StartingRow;
+                int startingColumn;
                 if (isVertical) {
                     StartingRow = (int) ((this.size - shipSizes[i] + 1) * Math.random());
                     startingColumn = (int) ((this.size) * Math.random());
@@ -200,10 +194,6 @@ public class NavalGrid {
 		}
 
 		return false;
-    }
-
-    public boolean isMissed(Coordonnee coords) {
-        return !this.isTouched(coords);
     }
 
     public boolean isSunk(Coordonnee c) {

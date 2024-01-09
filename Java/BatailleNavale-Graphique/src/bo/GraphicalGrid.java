@@ -4,25 +4,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentEvent;
 
 class JButtonCoordonnee extends JButton {
-    private Coordonnee coords;
-    public boolean isLocalEnabled = true;
+    private final Coordonnee coords;
     public JButtonCoordonnee(Coordonnee coords) {
         this.coords = coords;
     }
     public Coordonnee getCoords() {
         return coords;
     }
-    public void setLocalEnabled(boolean isLocalEnabled) {
-        this.isLocalEnabled = isLocalEnabled;
-    }
 }
 
 public class GraphicalGrid extends JPanel implements ActionListener {
 
-    private JButton[][] cases;
+    private final JButton[][] cases;
 
     private Coordonnee SelectedCoords;
 

@@ -1,8 +1,8 @@
 package bo;
 
 public class Coordonnee {
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
 
     public Coordonnee(int row, int column) {
         if (row < 0 || row > 25 || column < 0 || column > 25) {
@@ -13,7 +13,7 @@ public class Coordonnee {
     }
 
     public Coordonnee(String s) {
-        if (s.equals("")) {
+        if (s.isEmpty()) {
             throw new IllegalArgumentException("The string \"" + s + "\" must not be empty");
         }
 
@@ -41,7 +41,7 @@ public class Coordonnee {
 
     @Override
     public String toString() {
-        return "" + (char)(this.column + 65) + (int)(this.row + 1);
+        return "" + (char)(this.column + 65) + this.row + 1;
     }
 
     public int getRow() {
@@ -53,25 +53,10 @@ public class Coordonnee {
     }
 
     public boolean equals(Object obj) {
-        if (!(obj instanceof Coordonnee)) {
+        if (!(obj instanceof Coordonnee coords)) {
             return false;
         }
 
-        Coordonnee coords = (Coordonnee) obj;
         return (coords.row == this.row && coords.column == this.column);
     }
-
-    public boolean neighbor(Coordonnee coords) {
-        return (((this.column == coords.column) && ((this.row == coords.row + 1) || (this.row == coords.row - 1))) || ((this.row == coords.row) && ((this.column == coords.column+1) || (this.column == coords.column - 1))));
-    }
-
-    public int compareTo(Coordonnee coords) {
-		if ((this.row == coords.row) && (this.column == coords.column)) {
-            return 0;
-        } else if (this.row != coords.row && this.column == coords.column) {
-			return this.row - coords.row;
-		} else {
-			return this.column - coords.column;
-        }
-	}
 }

@@ -1,7 +1,7 @@
 package bo;
 
 public abstract class PlayerWithGrid extends Player {
-    private NavalGrid grid;
+    private final NavalGrid grid;
 
     public PlayerWithGrid(NavalGrid grid, String name) {
         super(grid.getSize(), name);

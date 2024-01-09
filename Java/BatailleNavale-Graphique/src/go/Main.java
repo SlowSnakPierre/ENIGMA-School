@@ -3,11 +3,8 @@ package go;
 import bo.*;
 
 import javax.swing.*;
-import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 @SuppressWarnings("DuplicatedCode")
 public class Main {
@@ -21,30 +18,25 @@ public class Main {
     private final ButtonGroup buttonGroup_P2 = new ButtonGroup();
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Main window = new Main();
-                    window.frmSeaBattle.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        EventQueue.invokeLater(() -> {
+            try {
+                Main window = new Main();
+                window.frmSeaBattle.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }
 
     private void startGame() {
-        new Thread() {
-            public void run() {
-                if ((player1 == null) || (player2 == null)) {
-                    JOptionPane.showMessageDialog(frmSeaBattle, " Please give a player a name \n and choose a type ("+((player1 == null) ? "Player 1" : "Player 2")+" is missing)");
-                    return;
-                }
-				frmSeaBattle.setVisible(false);
-                player1.playWith(player2);
+        new Thread(() -> {
+            if ((player1 == null) || (player2 == null)) {
+                JOptionPane.showMessageDialog(frmSeaBattle, " Please give a player a name \n and choose a type ("+((player1 == null) ? "Player 1" : "Player 2")+" is missing)");
+                return;
             }
-        }.start();
+            frmSeaBattle.setVisible(false);
+            player1.playWith(player2);
+        }).start();
     }
 
     public Main() {
@@ -148,166 +140,158 @@ public class Main {
 		frmSeaBattle.getContentPane().add(panel3);
 		panel3.setLayout(null);
 		JButton StartGameBtn = new JButton("Start Game");
-        StartGameBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                EventQueue.invokeLater(new Runnable() {
+        StartGameBtn.addActionListener(e -> EventQueue.invokeLater(() -> {
+            String p1Name = textField_1.getText().compareTo("")==0 ? "Player 1" : textField_1.getText();
+            String p2Name = textField_2.getText().compareTo("")==0 ? "Player 2" : textField_2.getText();
+
+            if (rdbtP1Graphical.isSelected()) {
+                PlayerWindow window = new PlayerWindow(GRID_SIZE);
+                ShipPlacementWindow placementWindow = new ShipPlacementWindow(GRID_SIZE, tabNav, window.getDefendingGrid());
+                placementWindow.setTitle("Sea Battle : " + p1Name + " Waiting for placement");
+                centreWindow(placementWindow);
+                placementWindow.setVisible(true);
+
+                new SwingWorker<Void, Void>() {
                     @Override
-                    public void run() {
-						String p1Name = textField_1.getText().compareTo("")==0 ? "Player 1" : textField_1.getText();
-						String p2Name = textField_2.getText().compareTo("")==0 ? "Player 2" : textField_2.getText();
+                    protected Void doInBackground() {
+                        while (!placementWindow.isAllShipsPlaced()) {
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                        return null;
+                    }
 
-						if (rdbtP1Graphical.isSelected()) {
-							PlayerWindow window = new PlayerWindow(p1Name, GRID_SIZE);
-							ShipPlacementWindow placementWindow = new ShipPlacementWindow(p1Name, GRID_SIZE, tabNav, window.getDefendingGrid());
-							placementWindow.setTitle("Sea Battle : " + p1Name + " Waiting for placement");
-							centreWindow(placementWindow);
-							placementWindow.setVisible(true);
+                    @Override
+                    protected void done() {
+                        placementWindow.setVisible(false);
+                        centreWindow(window);
+                        window.setTitle("Sea Battle : " + p1Name);
+                        window.setVisible(true);
+                        player1 = new GraphicalPlayer(window.getDefendingGrid(), window.getShootingGrid(), p1Name);
 
-							new SwingWorker<Void, Void>() {
-								@Override
-								protected Void doInBackground() throws Exception {
-									while (!placementWindow.isAllShipsPlaced()) {
-										try {
-											Thread.sleep(1000);
-										} catch (InterruptedException ex) {
-											ex.printStackTrace();
-										}
-									}
-									return null;
-								}
+                        if (rdbtP2Graphical.isSelected()) {
+                            PlayerWindow window2 = new PlayerWindow(GRID_SIZE);
+                            ShipPlacementWindow placementWindow = new ShipPlacementWindow(GRID_SIZE, tabNav, window2.getDefendingGrid());
+                            placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
+                            centreWindow(placementWindow);
+                            placementWindow.setVisible(true);
 
-								@Override
-								protected void done() {
-									placementWindow.setVisible(false);
-									centreWindow(window);
-									window.setTitle("Sea Battle : " + p1Name);
-									window.setVisible(true);
-									player1 = new GraphicalPlayer(window.getDefendingGrid(), window.getShootingGrid(), p1Name);
+                            new SwingWorker<Void, Void>() {
+                                @Override
+                                protected Void doInBackground() {
+                                    while (!placementWindow.isAllShipsPlaced()) {
+                                        try {
+                                            Thread.sleep(1000);
+                                        } catch (InterruptedException ex) {
+                                            ex.printStackTrace();
+                                        }
+                                    }
+                                    return null;
+                                }
 
-									if (rdbtP2Graphical.isSelected()) {
-										PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-										ShipPlacementWindow placementWindow = new ShipPlacementWindow(p2Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
-										placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
-										centreWindow(placementWindow);
-										placementWindow.setVisible(true);
-
-										new SwingWorker<Void, Void>() {
-											@Override
-											protected Void doInBackground() throws Exception {
-												while (!placementWindow.isAllShipsPlaced()) {
-													try {
-														Thread.sleep(1000);
-													} catch (InterruptedException ex) {
-														ex.printStackTrace();
-													}
-												}
-												return null;
-											}
-
-											@Override
-											protected void done() {
-												placementWindow.setVisible(false);
-												centreWindow(window2);
-												window2.setTitle("Sea Battle : " + p2Name);
-												window2.setVisible(true);
-												player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
-												startGame();
-											}
-										}.execute();
-									} else if (rdbtP2GraphicalAuto.isSelected()) {
-										PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-										window2.getDefendingGrid().placementAuto(tabNav);
-										centreWindow(window2);
-										window2.setTitle("Sea Battle : " + p2Name);
-										window2.setVisible(true);
-										player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
-										startGame();
-									} else if (rdbtP2Texte.isSelected()) {
-										NavalGrid P2Grid = new NavalGrid(GRID_SIZE, tabNav);
-										P2Grid.placementAuto(tabNav);
-										player2 = new TextualPlayer(P2Grid, p2Name);
-										startGame();
-									} else if (rdbtP2Auto.isSelected()) {
-										NavalGrid G2 = new NavalGrid(GRID_SIZE, tabNav);
-										G2.placementAuto(tabNav);
-										player2 = new AutoPlayer(G2, p2Name);
-										startGame();
-									}
-								}
-							}.execute();
-						} else if (rdbtP1GraphicalAuto.isSelected()) {
-							PlayerWindow window = new PlayerWindow(p1Name, GRID_SIZE);
-							window.getDefendingGrid().placementAuto(tabNav);
-							centreWindow(window);
-							window.setTitle("Sea Battle : " + p2Name);
-							window.setVisible(true);
-							player1 = new GraphicalPlayer(window.getDefendingGrid(), window.getShootingGrid(), p1Name);
-						} else if (rdbtP1Texte.isSelected()) {
-							NavalGrid P1Grid = new NavalGrid(GRID_SIZE, tabNav);
-							P1Grid.placementAuto(tabNav);
-							player1 = new TextualPlayer(P1Grid, p1Name);
-						} else if (rdbtP1Auto.isSelected()) {
-							NavalGrid G1 = new NavalGrid(GRID_SIZE, tabNav);
-							G1.placementAuto(tabNav);
-							player1 = new AutoPlayer(G1, p1Name);
-						}
-
-						if (!rdbtP1Graphical.isSelected()) {
-							if (rdbtP2Graphical.isSelected()) {
-								PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-								ShipPlacementWindow placementWindow = new ShipPlacementWindow(p2Name, GRID_SIZE, tabNav, window2.getDefendingGrid());
-								placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
-								centreWindow(placementWindow);
-								placementWindow.setVisible(true);
-
-								new SwingWorker<Void, Void>() {
-									@Override
-									protected Void doInBackground() throws Exception {
-										while (!placementWindow.isAllShipsPlaced()) {
-											try {
-												Thread.sleep(1000);
-											} catch (InterruptedException ex) {
-												ex.printStackTrace();
-											}
-										}
-										return null;
-									}
-
-									@Override
-									protected void done() {
-										placementWindow.setVisible(false);
-										centreWindow(window2);
-										window2.setTitle("Sea Battle : " + p2Name);
-										window2.setVisible(true);
-										player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
-										startGame();
-									}
-								}.execute();
-							} else if (rdbtP2GraphicalAuto.isSelected()) {
-								PlayerWindow window2 = new PlayerWindow(p2Name, GRID_SIZE);
-								window2.getDefendingGrid().placementAuto(tabNav);
-								centreWindow(window2);
-								window2.setTitle("Sea Battle : " + p2Name);
-								window2.setVisible(true);
-								player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
-								startGame();
-							} else if (rdbtP2Texte.isSelected()) {
-								NavalGrid P2Grid = new NavalGrid(GRID_SIZE, tabNav);
-								P2Grid.placementAuto(tabNav);
-								player2 = new TextualPlayer(P2Grid, p2Name);
-								startGame();
-							} else if (rdbtP2Auto.isSelected()) {
-								NavalGrid G2 = new NavalGrid(GRID_SIZE, tabNav);
-								G2.placementAuto(tabNav);
-								player2 = new AutoPlayer(G2, p2Name);
-								startGame();
-							}
-						}
-					}
-                });
+                                @Override
+                                protected void done() {
+                                    placementWindow.setVisible(false);
+                                    centreWindow(window2);
+                                    window2.setTitle("Sea Battle : " + p2Name);
+                                    window2.setVisible(true);
+                                    player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
+                                    startGame();
+                                }
+                            }.execute();
+                        } else if (rdbtP2GraphicalAuto.isSelected()) {
+                            PlayerWindow window2 = new PlayerWindow(GRID_SIZE);
+                            window2.getDefendingGrid().placementAuto(tabNav);
+                            centreWindow(window2);
+                            window2.setTitle("Sea Battle : " + p2Name);
+                            window2.setVisible(true);
+                            player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
+                            startGame();
+                        } else if (rdbtP2Texte.isSelected()) {
+                            NavalGrid P2Grid = new NavalGrid(GRID_SIZE, tabNav);
+                            P2Grid.placementAuto(tabNav);
+                            player2 = new TextualPlayer(P2Grid, p2Name);
+                            startGame();
+                        } else if (rdbtP2Auto.isSelected()) {
+                            NavalGrid G2 = new NavalGrid(GRID_SIZE, tabNav);
+                            G2.placementAuto(tabNav);
+                            player2 = new AutoPlayer(G2, p2Name);
+                            startGame();
+                        }
+                    }
+                }.execute();
+            } else if (rdbtP1GraphicalAuto.isSelected()) {
+                PlayerWindow window = new PlayerWindow(GRID_SIZE);
+                window.getDefendingGrid().placementAuto(tabNav);
+                centreWindow(window);
+                window.setTitle("Sea Battle : " + p2Name);
+                window.setVisible(true);
+                player1 = new GraphicalPlayer(window.getDefendingGrid(), window.getShootingGrid(), p1Name);
+            } else if (rdbtP1Texte.isSelected()) {
+                NavalGrid P1Grid = new NavalGrid(GRID_SIZE, tabNav);
+                P1Grid.placementAuto(tabNav);
+                player1 = new TextualPlayer(P1Grid, p1Name);
+            } else if (rdbtP1Auto.isSelected()) {
+                NavalGrid G1 = new NavalGrid(GRID_SIZE, tabNav);
+                G1.placementAuto(tabNav);
+                player1 = new AutoPlayer(G1, p1Name);
             }
-        });
+
+            if (!rdbtP1Graphical.isSelected()) {
+                if (rdbtP2Graphical.isSelected()) {
+                    PlayerWindow window2 = new PlayerWindow(GRID_SIZE);
+                    ShipPlacementWindow placementWindow = new ShipPlacementWindow(GRID_SIZE, tabNav, window2.getDefendingGrid());
+                    placementWindow.setTitle("Sea Battle : " + p2Name + " Waiting for placement");
+                    centreWindow(placementWindow);
+                    placementWindow.setVisible(true);
+
+                    new SwingWorker<Void, Void>() {
+                        @Override
+                        protected Void doInBackground() {
+                            while (!placementWindow.isAllShipsPlaced()) {
+                                try {
+                                    Thread.sleep(1000);
+                                } catch (InterruptedException ex) {
+                                    ex.printStackTrace();
+                                }
+                            }
+                            return null;
+                        }
+
+                        @Override
+                        protected void done() {
+                            placementWindow.setVisible(false);
+                            centreWindow(window2);
+                            window2.setTitle("Sea Battle : " + p2Name);
+                            window2.setVisible(true);
+                            player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
+                            startGame();
+                        }
+                    }.execute();
+                } else if (rdbtP2GraphicalAuto.isSelected()) {
+                    PlayerWindow window2 = new PlayerWindow(GRID_SIZE);
+                    window2.getDefendingGrid().placementAuto(tabNav);
+                    centreWindow(window2);
+                    window2.setTitle("Sea Battle : " + p2Name);
+                    window2.setVisible(true);
+                    player2 = new GraphicalPlayer(window2.getDefendingGrid(), window2.getShootingGrid(), p2Name);
+                    startGame();
+                } else if (rdbtP2Texte.isSelected()) {
+                    NavalGrid P2Grid = new NavalGrid(GRID_SIZE, tabNav);
+                    P2Grid.placementAuto(tabNav);
+                    player2 = new TextualPlayer(P2Grid, p2Name);
+                    startGame();
+                } else if (rdbtP2Auto.isSelected()) {
+                    NavalGrid G2 = new NavalGrid(GRID_SIZE, tabNav);
+                    G2.placementAuto(tabNav);
+                    player2 = new AutoPlayer(G2, p2Name);
+                    startGame();
+                }
+            }
+        }));
 
 		StartGameBtn.setFont(new Font("Dialog", Font.BOLD, 13));
 		StartGameBtn.setBounds(27, 12, 135, 27);

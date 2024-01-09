@@ -3,7 +3,7 @@ package bo;
 import java.awt.*;
 
 public class GraphicalNavalGrid extends NavalGrid {
-    private GraphicalGrid grid;
+    private final GraphicalGrid grid;
 
     public GraphicalNavalGrid(int size) {
         super(size, 5);

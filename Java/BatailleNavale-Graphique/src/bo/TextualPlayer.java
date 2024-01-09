@@ -3,14 +3,8 @@ package bo;
 import java.util.Scanner;
 
 public class TextualPlayer extends PlayerWithGrid {
-    private Scanner sc;
-
     public TextualPlayer(NavalGrid grid, String name) {
         super(grid, name);
-    }
-
-    public TextualPlayer(NavalGrid grid) {
-        super(grid);
     }
 
     protected void returnAttack(Coordonnee coords, int status) {

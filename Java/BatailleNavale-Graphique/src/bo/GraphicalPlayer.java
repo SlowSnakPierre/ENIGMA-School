@@ -4,15 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GraphicalPlayer extends PlayerWithGrid {
-    private GraphicalGrid shootingGrid;
+    private final GraphicalGrid shootingGrid;
 
     public GraphicalPlayer(GraphicalNavalGrid defendingGrid, GraphicalGrid attackingGrid, String name) {
         super(defendingGrid, name);
-        this.shootingGrid = attackingGrid;
-    }
-
-    public GraphicalPlayer(GraphicalNavalGrid defendingGrid, GraphicalGrid attackingGrid) {
-        super(defendingGrid);
         this.shootingGrid = attackingGrid;
     }
 

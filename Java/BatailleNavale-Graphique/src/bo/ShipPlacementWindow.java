@@ -7,28 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ShipPlacementWindow extends JFrame {
-    private JPanel contentPane;
-    private JPanel topPanel;
-    private GraphicalGrid placementGrid;
+    final private JPanel topPanel;
+    final private GraphicalGrid placementGrid;
     private int allShipsPlacedNbr = 0;
-    private int size;
-    private int[] ships;
+    final private int[] ships;
     private boolean isVertical = true;
 
-    public ShipPlacementWindow() {
-        this("Player Name", 10, new int[] { 2, 3, 3, 4, 5 }, new GraphicalNavalGrid(10));
-    }
-
-    public ShipPlacementWindow(String name, int size, int[] ships, GraphicalNavalGrid grid) {
+    public ShipPlacementWindow(int size, int[] ships, GraphicalNavalGrid grid) {
         this.ships = ships;
         this.placementGrid = new GraphicalGrid(size);
         this.placementGrid.setClickActive(false);
-        this.size = size;
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setBounds(100, 100, (int) (size * 80), (int) (size * 40) + 50);
-        contentPane = new JPanel();
+        setBounds(100, 100, size * 80,size * 40 + 50);
+        JPanel contentPane = new JPanel();
         contentPane.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -61,7 +54,7 @@ public class ShipPlacementWindow extends JFrame {
     }
 
 	private String getShipName(int size) {
-		final Map<Integer, String> ships = new HashMap<Integer, String>() {{
+		final Map<Integer, String> ships = new HashMap<>() {{
 			put(5, "Porte-Avions");
 			put(4, "Croisseur");
 			put(3, "Contre-Torpilleurs");
@@ -84,22 +77,18 @@ public class ShipPlacementWindow extends JFrame {
 
         for (int ship : ships) {
             JButton shipButton = new JButton(getShipName(ship) + " (" + ship + ")");
-            shipButton.addActionListener(e -> {
-                new Thread() {
-                    public void run() {
-                        Coordonnee coords = placementGrid.getSelectedCoords();
+            shipButton.addActionListener(e -> new Thread(() -> {
+                Coordonnee coords = placementGrid.getSelectedCoords();
 
-                        Ship n = new Ship(coords, ship, isVertical);
-                        if (grid.addShip(n)) {
-                            placementGrid.setColor(n.getStarting(), n.getEnding(), Color.GRAY);
-                            ((JButton) e.getSource()).setEnabled(false);
-                            allShipsPlacedNbr++;
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Impossible de placer le bateau ici");
-                        }
-                    }
-                }.start();
-            });
+                Ship n = new Ship(coords, ship, isVertical);
+                if (grid.addShip(n)) {
+                    placementGrid.setColor(n.getStarting(), n.getEnding(), Color.GRAY);
+                    ((JButton) e.getSource()).setEnabled(false);
+                    allShipsPlacedNbr++;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Impossible de placer le bateau ici");
+                }
+            }).start());
             shipsPanel.add(shipButton);
         }
 

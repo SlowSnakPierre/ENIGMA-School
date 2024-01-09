@@ -35,7 +35,7 @@ public class Display {
             String currentShipIndicator = Objects.equals(currentShipName.toLowerCase(), "cruiser") ? currentShipName.substring(0, 1).toLowerCase() : currentShipName.substring(0, 1).toUpperCase();
             if (!currentPlayer.playerBoard.ships.isEmpty()) {
 
-                Ship currentShip = currentPlayer.playerBoard.ships.get(0);
+                Ship currentShip = currentPlayer.playerBoard.ships.getFirst();
                 for (Ship ship : currentPlayer.playerBoard.ships) {
                     if (ship.name.equals(currentShipName)) {
                         currentShip = ship;

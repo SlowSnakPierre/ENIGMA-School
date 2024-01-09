@@ -1,6 +1,5 @@
 package bo;
 
-import javax.swing.*;
 import java.util.Objects;
 
 public abstract class Player {
@@ -8,10 +7,8 @@ public abstract class Player {
     public final static int SUNK = 2;
     public final static int MISSED = 3;
     public final static int GAMEOVER = 4;
-
-    private Player opponent;
-    private int GRID_SIZE;
-    private String name;
+    private final int GRID_SIZE;
+    private final String name;
 
     public Player(int GRID_SIZE, String name) {
         this.name = name;
@@ -32,8 +29,6 @@ public abstract class Player {
     }
 
     public void playWith(Player opponent) {
-        this.opponent = opponent;
-        opponent.opponent = this;
         System.out.println("Connection successful !");
 
         gameCoroutine(this, opponent);
@@ -44,10 +39,9 @@ public abstract class Player {
         System.out.println("                    " + attacker + " VS " + defender);
         System.out.println("############################################################################");
 
-        int resAtt = 0;
-        int resDef = 0;
+        int resAtt;
 
-        while (resAtt != GAMEOVER || resDef != GAMEOVER) {
+        while (true) {
             Coordonnee cAtt = attacker.chooseAttack();
 
             resAtt = defender.receiveAttack(cAtt);

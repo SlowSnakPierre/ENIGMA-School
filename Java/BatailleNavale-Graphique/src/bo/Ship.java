@@ -1,9 +1,9 @@
 package bo;
 
 public class Ship {
-    private Coordonnee starting;
-    private Coordonnee ending;
-    private Coordonnee[] affectedParts;
+    private final Coordonnee starting;
+    private final Coordonnee ending;
+    private final Coordonnee[] affectedParts;
 
     private int cbAffected;
 
@@ -37,7 +37,7 @@ public class Ship {
             length = this.ending.getRow() - this.starting.getRow() + 1;
         }
 
-        return "Ship("+this.starting.toString() + ", " + length + ", " + position + ")";
+        return "Ship("+this.starting + ", " + length + ", " + position + ")";
     }
 
     public Coordonnee getStarting() {
@@ -102,10 +102,6 @@ public class Ship {
 				return true;
 		}
 		return false;
-    }
-
-    public boolean isTouched() {
-		return (this.cbAffected != 0);
     }
 
     public boolean isSunk() {
