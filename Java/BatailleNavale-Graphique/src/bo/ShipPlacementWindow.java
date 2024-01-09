@@ -27,14 +27,14 @@ public class ShipPlacementWindow extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setBounds(100, 100, (int) (size * 80), (int) (size * 40));
+        setBounds(100, 100, (int) (size * 80), (int) (size * 40) + 50);
         contentPane = new JPanel();
         contentPane.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weightx = 1;
-        gbc.weighty = 0.75;
+        gbc.weighty = 0.9;
         gbc.fill = GridBagConstraints.BOTH;
 
         setContentPane(contentPane);
@@ -53,7 +53,7 @@ public class ShipPlacementWindow extends JFrame {
             rotateButton.setText(!isVertical ? "Rotate Ship Verticaly" : "Rotate Ship Horizontaly");
         });
         gbc.gridy = 1;
-        gbc.weighty = 0.25;
+        gbc.weighty = 0.1;
         gbc.insets = new Insets(10, 10, 10, 10);
         contentPane.add(rotateButton, gbc);
 
@@ -76,7 +76,9 @@ public class ShipPlacementWindow extends JFrame {
         shipsPanelContainer.setBorder(BorderFactory.createTitledBorder(null, "Available Ship(s)", TitledBorder.CENTER, TitledBorder.DEFAULT_JUSTIFICATION));
 
         JPanel shipsPanel = new JPanel();
-        shipsPanel.setLayout(new GridLayout(ships.length, 1));
+        GridLayout layout = new GridLayout(ships.length, 1);
+        layout.setVgap(10);
+        shipsPanel.setLayout(layout);
         shipsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         shipsPanelContainer.add(shipsPanel);
 
