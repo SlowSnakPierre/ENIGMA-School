@@ -12,20 +12,18 @@ public class Main {
     private final int GRID_SIZE = 10;
 	final int[] tabNav = { 2, 3, 3, 4, 5 };
     private JFrame frmSeaBattle;
-    private JTextField textField_1;
-    private JTextField textField_2;
+    private JTextField textField_P1;
+    private JTextField textField_P2;
     private final ButtonGroup buttonGroup_P1 = new ButtonGroup();
     private final ButtonGroup buttonGroup_P2 = new ButtonGroup();
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                Main window = new Main();
-                window.frmSeaBattle.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+        try {
+            Main window = new Main();
+            window.frmSeaBattle.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void startGame() {
@@ -75,9 +73,9 @@ public class Main {
 		JLabel lblNom = new JLabel("Name : ");
 		lblNom.setFont(new Font("Dialog", Font.BOLD, 13));
 		panel.add(lblNom);
-		textField_1 = new JTextField();
-		panel.add(textField_1);
-		textField_1.setColumns(10);
+		textField_P1 = new JTextField();
+		panel.add(textField_P1);
+		textField_P1.setColumns(10);
 
 		JRadioButton rdbtP1Graphical = new JRadioButton("Graphical Player (Manual)");
 		buttonGroup_P1.add(rdbtP1Graphical);
@@ -110,9 +108,9 @@ public class Main {
 		JLabel lblNewLabel = new JLabel("Name : ");
 		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 13));
 		panel_1.add(lblNewLabel);
-		textField_2 = new JTextField();
-		panel_1.add(textField_2);
-		textField_2.setColumns(10);
+		textField_P2 = new JTextField();
+		panel_1.add(textField_P2);
+		textField_P2.setColumns(10);
 
 		JRadioButton rdbtP2Graphical = new JRadioButton("Graphical Player (Manual)");
 		rdbtP2Graphical.setFont(new Font("Dialog", Font.BOLD, 13));
@@ -141,8 +139,8 @@ public class Main {
 		panel3.setLayout(null);
 		JButton StartGameBtn = new JButton("Start Game");
         StartGameBtn.addActionListener(e -> EventQueue.invokeLater(() -> {
-            String p1Name = textField_1.getText().compareTo("")==0 ? "Player 1" : textField_1.getText();
-            String p2Name = textField_2.getText().compareTo("")==0 ? "Player 2" : textField_2.getText();
+            String p1Name = textField_P1.getText().compareTo("")==0 ? "Player 1" : textField_P1.getText();
+            String p2Name = textField_P2.getText().compareTo("")==0 ? "Player 2" : textField_P2.getText();
 
             if (rdbtP1Graphical.isSelected()) {
                 PlayerWindow window = new PlayerWindow(GRID_SIZE);

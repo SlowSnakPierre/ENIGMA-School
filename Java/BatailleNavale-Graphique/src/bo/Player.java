@@ -15,11 +15,6 @@ public abstract class Player {
         this.GRID_SIZE = GRID_SIZE;
     }
 
-    public Player(int GRID_SIZE) {
-        this.GRID_SIZE = GRID_SIZE;
-        this.name = "Default Player";
-    }
-
     public int getGridSize() {
         return this.GRID_SIZE;
     }

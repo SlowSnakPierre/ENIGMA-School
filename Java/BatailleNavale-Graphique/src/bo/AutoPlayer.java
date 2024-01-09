@@ -1,5 +1,6 @@
 package bo;
 
+@SuppressWarnings("DuplicatedCode")
 public class AutoPlayer extends PlayerWithGrid {
     public AutoPlayer(NavalGrid grid, String name) {
         super(grid, name);

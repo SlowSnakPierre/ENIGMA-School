@@ -2,6 +2,7 @@ package bo;
 
 import java.util.Scanner;
 
+@SuppressWarnings("DuplicatedCode")
 public class TextualPlayer extends PlayerWithGrid {
     public TextualPlayer(NavalGrid grid, String name) {
         super(grid, name);

@@ -8,11 +8,6 @@ public abstract class PlayerWithGrid extends Player {
         this.grid = grid;
     }
 
-    public PlayerWithGrid(NavalGrid grid) {
-        super(grid.getSize());
-        this.grid = grid;
-    }
-
     public int receiveAttack(Coordonnee coords) {
         grid.receiveShoot(coords);
 
