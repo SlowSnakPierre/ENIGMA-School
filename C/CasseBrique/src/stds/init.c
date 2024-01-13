@@ -15,6 +15,7 @@ void initGame(const char* title, const int w, const int h, const int lw, const i
 
     app.originalTitle = title;
 
+
     atexit(cleanup);
 }
 
@@ -69,6 +70,8 @@ static void initSDL(const char* windowName, const int windowWidth, const int win
     IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
 
     SDL_ShowCursor(true);
+
+    SDL_SetWindowIcon(app.window, IMG_Load("res/img/ball_sprite.png"));
 
     initAudioContext();
 }

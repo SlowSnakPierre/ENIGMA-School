@@ -159,15 +159,15 @@ void pausedHUD(void) {
 static void drawLives(const SDL_Color* c) {
     int fw, fh;
     int tw, th;
-    const int initial_offset = 20;
+    const int initial_offset = 30;
     const int offset = 5;
 
-    drawText(initial_offset, initial_offset, c->r, c->g, c->b, "res/fonts/arcadia.ttf", 16, "VIES: ");
+    drawText(initial_offset, initial_offset/1.5, c->r, c->g, c->b, "res/fonts/arcadia.ttf", 16, "VIES: ");
 
     SDL_QueryTexture(heartTexture, NULL, NULL, &tw, &th);
     getStringSize("VIES: ", "res/fonts/arcadia.ttf", 16, &fw, &fh);
 
-    const int v_offset = initial_offset + fh + offset;
+    const int v_offset = initial_offset/1.5 + fh + offset;
 
     for (int i = 0, x = initial_offset; i < paddle->life; i++, x += tw + offset) {
         blitTexture(heartTexture, x, v_offset, false, false);
@@ -184,11 +184,11 @@ static void drawPregameText(const SDL_Color* c) {
 
 static void drawScore(const SDL_Color* c) {
     int fw, fh;
-    const int offset = 20;
+    const int offset = 30;
     getStringSize("Score:", "res/fonts/arcadia.ttf", 16, &fw, &fh);
-    const int v_offset = offset + fh + 5;
+    const int v_offset = offset/1.5 + fh + 5;
 
-    drawText(app.SCREEN_WIDTH - fw - offset, offset, c->r, c->g, c->b, "res/fonts/arcadia.ttf", 16, "Score:");
+    drawText(app.SCREEN_WIDTH - fw - offset, offset/1.5, c->r, c->g, c->b, "res/fonts/arcadia.ttf", 16, "Score:");
 
     drawText(app.SCREEN_WIDTH - fw - offset, v_offset, 255, 255, 255, "res/fonts/arcadia.ttf", 16, "%d", stage.score);
 }

@@ -21,196 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a57f71-c5cc-4d53-926a-5fc61be05db3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/BallMovingSDL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/SDL2_ttf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/arial.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-7055adb6cc936737a2f2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/3.27.0/CompilerIdC/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/HelloSDL2.dir/main.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/HelloSDL2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BallMovingSDL/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CasseBrique.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL2_image.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL2_mixer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDL2_ttf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/ball.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/brick.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/commons.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/debris.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/game_defs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/game_structs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/hud.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/level.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/main.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/paddle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/particle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/powerup.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/score_item.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/animation.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/background.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/button.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/collision.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/draw.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/init.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/input.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/particle_system.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/sound.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/stddefine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/stds.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/structs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/text.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/stds/trail.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/transition.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/fonts/arcadia.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/background/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/ball_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/blue/blue_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/blue/blue_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/blue/blue_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/blue/blue_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/blue/blue_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/brown/brown_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/brown/brown_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/brown/brown_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/brown/brown_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/brown/brown_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/dark_green/dark_green_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/dark_green/dark_green_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/dark_green/dark_green_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/dark_green/dark_green_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/dark_green/dark_green_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_blue/light_blue_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_blue/light_blue_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_blue/light_blue_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_blue/light_blue_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_blue/light_blue_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_green/light_green_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_green/light_green_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_green/light_green_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_green/light_green_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/light_green/light_green_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/orange/orange_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/orange/orange_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/orange/orange_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/orange/orange_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/orange/orange_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/purple/purple_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/purple/purple_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/purple/purple_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/purple/purple_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/purple/purple_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/red/red_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/red/red_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/red/red_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/red/red_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/red/red_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/yellow/yellow_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/yellow/yellow_1_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/yellow/yellow_2_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/yellow/yellow_3_damaged.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/brick/yellow/yellow_animated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/life.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/paddle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/blue/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/blue/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/blue/p0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/blue/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/green/p0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/green/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/red/p0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/particles/red/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/powerup/extra_life.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/powerup/gold_coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/powerup/large.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/powerup/multi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/ui/buttonStock1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/img/ui/buttonStock1h.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_data/level_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_data/level_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_data/level_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_data/level_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_data/level_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/blockbreak.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/coin.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/extra-life.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/hitblock.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/music/ingame.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/music/menu.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sfx/pause.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ball.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/brick.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/debris.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hud.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/level.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paddle.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/particle.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/powerup.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/score_item.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/animation.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/background.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/button.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/collision.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/draw.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/game.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/init.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/input.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/particle_system.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/sound.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/stds.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/text.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stds/trail.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transition.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloSDL2/.idea/HelloSDL2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HelloSDL2/image.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cardsgame/.idea/cardsgame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cardsgame/ansi.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cardsgame/main.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/ShipPlacementWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/Pendu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/Pendu.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pendu/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Pendu/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/GraphicalNavalGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/GraphicalNavalGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/NavalGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/NavalGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/PlayerWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/bo/PlayerWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/go/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java/BatailleNavale-Graphique/src/go/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CasseBrique.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CasseBrique.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hud.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/hud.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stds/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/stds/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stds/init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/stds/init.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,6 +50,7 @@
     <setting file="file://$APPLICATION_HOME_DIR$/bin/mingw/x86_64-w64-mingw32/include/uxtheme.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/SDL2-2.28.5/x86_64-w64-mingw32/include/SDL2/SDL.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/SDL2-2.28.5/x86_64-w64-mingw32/include/SDL2/SDL_main.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/SDL2_image-2.6.3/x86_64-w64-mingw32/include/SDL2/SDL_image.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.c" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -255,28 +74,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "CMake Application.CasseBrique.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/CasseBrique/res/level_data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;CMake Application.CasseBrique.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/thblt/OneDrive/Bureau/ENIGMA-School/C/CasseBrique/res/level_data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thblt\OneDrive\Bureau\ENIGMA-School\C\CasseBrique\res\level_data" />
@@ -320,6 +139,8 @@
       <workItem from="1704661307803" duration="4093000" />
       <workItem from="1704667705634" duration="4260000" />
       <workItem from="1704704224638" duration="5846000" />
+      <workItem from="1705075185414" duration="1000" />
+      <workItem from="1705179994275" duration="698000" />
     </task>
     <servers />
   </component>
