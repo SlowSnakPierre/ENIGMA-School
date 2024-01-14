@@ -86,13 +86,13 @@ void powerupLargeActivate(Entity_T* p) {
 
     p->life = FPS * 10;
     p->flags |= POWERUP_ACTIVE;
-    paddle->w *= (uint32_t)paddle->scaleX;
+    paddle->w *= 2;
     paddle->scaleX = 2.0f;
 }
 
 void powerupLargeDeactivate(Entity_T* p) {
-    paddle->scaleX = 1.0f;
     paddle->w /= 2;
+    paddle->scaleX = 1.0f;
     p->flags |= DEATH_MASK;
 }
 

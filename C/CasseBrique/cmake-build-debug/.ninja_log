@@ -96,3 +96,5 @@
 23	459	7268839610433744	CMakeFiles/CasseBrique.dir/src/stds/init.c.obj	12e3b22b6191e7d6
 16	461	7268839610449164	CMakeFiles/CasseBrique.dir/src/stds/draw.c.obj	a7906c1f160ff24e
 461	582	7268839611607223	CasseBrique.exe	fbb0cb7a6e4d8778
+2	677	7269418706465952	CMakeFiles/CasseBrique.dir/src/powerup.c.obj	122070bbd8634d9b
+677	1044	7269418710089742	CasseBrique.exe	fbb0cb7a6e4d8778
